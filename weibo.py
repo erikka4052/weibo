@@ -150,7 +150,7 @@ class Weibo:
         )
 
     def run(self):
-        print(time.strftime('%Y-%m-%d %H:%M:%S 执行完毕', time.localtime()))
+        print(time.strftime('%Y{y}%m{m}%d{d}').format(y='年',m='月',d='日'), time.localtime())
 
         url = f'https://m.weibo.cn/api/container/getIndex?containerid=107603{self.WEIBO_ID}'
 
